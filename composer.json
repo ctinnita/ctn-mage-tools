@@ -1,0 +1,15 @@
+{
+    "name": "ctinnita/ctn-mage-tools",
+    "license": "OSL-3.0",
+    "type": "magento-module",
+    "description": "Magento Development Tools from Constantin Nita",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "authors":[
+        {
+            "name":"Constantin Nita",
+            "email":"ctinnita@gmail.com"
+        }
+    ]
+}

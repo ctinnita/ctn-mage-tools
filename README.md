@@ -1,3 +1,7 @@
+#ctn-mage-tools
+
+![scrutinizer build](https://scrutinizer-ci.com/g/ctinnita/ctn-mage-tools/badges/build.png?b=master "scrutinizer build")
+
 Magento Development Tools from Constantin Nita
 
 Ctn_Mail

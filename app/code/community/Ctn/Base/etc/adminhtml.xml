@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <!-- adds new admin top menu item 'CTN' -->        
+        <!-- 'module' is actually a helper -->
+        <ctn translate="title" module="ctn_base">
+            <title>CTN</title>
+            <sort_order>15</sort_order>
+        </ctn>
+    </menu>
+
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <ctn translate="title" module="ctn_base">
+                        <title>CTN</title>
+                    </ctn>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ctn_Debug>
+            <version>0.1.0</version>
+        </Ctn_Debug>
+    </modules>
+
+    <frontend>
+        <routers>
+            <ctn_debug>
+                <use>standard</use>
+                <args>
+                    <module>Ctn_Debug</module>
+                    <frontName>ctndebug</frontName>
+                </args>
+            </ctn_debug>
+        </routers>
+    </frontend>
+
+    <global>
+        <blocks>
+            <ctn_debug>
+                <class>Ctn_Debug_Block</class>
+            </ctn_debug>
+        </blocks>
+        <helpers>
+            <ctn_debug>
+                <class>Ctn_Debug_Helper</class>
+            </ctn_debug>
+        </helpers>
+    </global>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Ctn_Debug after="Mage_Adminhtml">Ctn_Debug_Adminhtml</Ctn_Debug>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

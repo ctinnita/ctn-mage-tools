@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ctn_Mail>
+            <version>0.1.0</version>
+        </Ctn_Mail>
+    </modules>
+
+    <frontend>
+        <routers>
+            <ctn_mail>
+                <use>standard</use>
+                <args>
+                    <module>Ctn_Mail</module>
+                    <frontName>ctnmail</frontName>
+                </args>
+            </ctn_mail>
+        </routers>
+    </frontend>
+
+    <global>
+        <blocks>
+            <ctn_mail>
+                <class>Ctn_Mail_Block</class>
+            </ctn_mail>
+        </blocks>
+        
+        <helpers>
+            <ctn_mail>
+                <class>Ctn_Mail_Helper</class>
+            </ctn_mail>
+            <!-- so Mage_Core_Model_Email_Template: 228 does not error out -->
+            <!-- in other words we need to be able to create the default data helper with this exact prefix: Ctn_Mail -->
+            <Ctn_Mail>
+                <class>Ctn_Mail_Helper</class>
+            </Ctn_Mail>            
+        </helpers>
+        
+        <models>
+            <core>
+                <rewrite> 
+                    <email_template>Ctn_Mail_Model_Core_Email_Template</email_template>
+                </rewrite>
+            </core>
+        </models>
+        
+        <!--<template>
+            <email>
+                <ctnmail_test_email_template translate="label" module="ctn_mail">
+                    <label>CTN Test</label>
+                    <file>ctn/test.html</file>
+                    <type>html</type>
+                </ctnmail_test_email_template>
+            </email>
+        </template>-->
+    </global>
+    
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+
+                        <!-- 'System' in top menu -->
+                        <system>
+                            <children>
+                                <!-- 'Configuration' in 'System' -->
+                                <config>
+                                    <children>
+                                        <ctnmail>
+                                            <title>CTN Mail</title>
+                                        </ctnmail>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>    
+    
+    <default>
+        <ctnmail>            
+            <smtp>
+                <!-- Default gmail values selected -->
+                <enabled>0</enabled>
+                <smtp_host>smtp.gmail.com</smtp_host>
+                <auth>LOGIN</auth>
+                <ssl>tls</ssl>
+                <port>587</port>                
+            </smtp>            
+            <!--<test>
+                <template>ctnmail_test_email_template</template>
+                <identity>general</identity>
+                <copy_method>bcc</copy_method>                
+            </test>-->
+        </ctnmail>    
+    </default>    
+</config>

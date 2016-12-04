@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ctn_Base>
+            <version>0.1.0</version>
+        </Ctn_Base>
+    </modules>
+
+    <frontend>
+        <routers>
+            <ctn_base>
+                <use>standard</use>
+                <args>
+                    <module>Ctn_Base</module>
+                    <frontName>ctnbase</frontName>
+                </args>
+            </ctn_base>
+        </routers>
+    </frontend>
+
+    <global>
+        <blocks>
+            <!-- 'ctn_base' is just a unique identifier, package_module distinction is not necessary  -->
+            <ctn_base>
+                <class>Ctn_Base_Block</class>
+            </ctn_base>
+        </blocks>
+        <helpers>
+            <ctn_base>
+                <class>Ctn_Base_Helper</class>
+            </ctn_base>
+        </helpers>
+    </global>
+
+    <stores>
+        <admin>
+            <!-- add new admin theme 'ctn' -->
+            <design>
+                <package>
+                    <name>default</name>
+                </package>
+                <theme>
+                    <default>ctn</default>
+                </theme>
+            </design>
+        </admin>
+    </stores>
+</config>

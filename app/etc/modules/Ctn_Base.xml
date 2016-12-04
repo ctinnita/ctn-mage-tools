@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Ctn_Base>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Ctn_Base>
+    </modules>
+</config>

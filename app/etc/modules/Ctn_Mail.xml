@@ -1,0 +1,11 @@
+<config>
+    <modules>
+        <Ctn_Mail>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Ctn_Base />
+            </depends>
+        </Ctn_Mail>
+    </modules>
+</config>

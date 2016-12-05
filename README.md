@@ -2,7 +2,7 @@
 
 ![scrutinizer build](https://scrutinizer-ci.com/g/ctinnita/ctn-mage-tools/badges/build.png?b=master "scrutinizer build")
 
-Magento Development Tools from Constantin Nita
+CTN Magento Development Tools
 
 Ctn_Mail
 - send application emails using SMTP server

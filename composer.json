@@ -2,8 +2,10 @@
     "name": "ctinnita/ctn-mage-tools",
     "license": "OSL-3.0",
     "type": "magento-module",
-    "description": "Magento Development Tools from Constantin Nita",
+    "homepage": "https://github.com/ctinnita/ctn-mage-tools",
+    "description": "CTN Magento Development Tools",
     "require": {
+        "php": ">=5.5",
         "magento-hackathon/magento-composer-installer": "*"
     },
     "authors":[
